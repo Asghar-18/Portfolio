@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { ArrowDown } from "lucide-react"
 
 export default function Hero() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const heroSectionRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -105,58 +105,62 @@ export default function Hero() {
   }, [])
 
   const scrollToNextSection = () => {
-    const nextSection = sectionRef.current?.nextElementSibling
+    // Scroll to the next section - assuming there's a section with id="about" after the hero
+    const nextSection = document.getElementById("about")
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" })
     }
   }
 
   return (
-     <div className="relative h-screen w-full overflow-hidden">
+     <div className="relative h-screen w-full overflow-hidden" ref={heroSectionRef}>
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full bg-black" />
-      <div className="section-padding text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-6"
-        >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            <span className="block">Hi, I&apos;m</span>
-            <span className="block mt-2 bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
-              Asghar Ali
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto">
-            A passionate developer crafting beautiful and functional web experiences
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white"
-              onClick={() => {
-                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-              }}
-            >
-              Get in Touch
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => {
-                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
-              }}
-            >
-              View My Work
-            </Button>
-          </div>
-        </motion.div>
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="section-padding text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
+          >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white">
+              <span className="block">Hi, I&apos;m</span>
+              <span className="block mt-2 bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+                Asghar Ali
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto">
+              A passionate developer crafting beautiful and functional web experiences
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white"
+                onClick={() => {
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+                }}
+              >
+                Get in Touch
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="text-white border-white hover:bg-white/10"
+                onClick={() => {
+                  document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+                }}
+              >
+                View My Work
+              </Button>
+            </div>
+          </motion.div>
+        </div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
         <button
           onClick={scrollToNextSection}
-          className="text-gray-400 hover:text-white transition-colors"
+          className="text-white hover:text-purple-300 transition-colors"
           aria-label="Scroll down"
         >
           <ArrowDown size={24} />
