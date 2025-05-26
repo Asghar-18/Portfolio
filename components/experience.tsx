@@ -30,7 +30,7 @@ export default function Experience() {
     {
       title: "Full-Stack Lead",
       company: "Parhlai",
-      logo: "/images/parhlai.svg",
+      logo: "/icons/parhlai-icon.svg",
       period: "March 2024 - Present",
       responsibilities: [
         "Developed a responsive frontend using Next.js, Tailwind CSS, TypeScript, and Shadcn components, ensuring optimal user experience across devices.",
@@ -42,7 +42,7 @@ export default function Experience() {
     {
       title: "MERN Stack Developer",
       company: "DevGate",
-      logo: "/images/devgate.jpeg",
+      logo: "/icons/devgate-icon.jpeg",
       period: "July 2024 - Present",
       responsibilities: [
         "Developed and deployed the 'Bachat' web application, enabling users to pool money for committees, with a focus on dashboard and new committee program screens.",

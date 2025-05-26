@@ -5,9 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   SiJavascript,
-  SiReact,
-  SiNodedotjs,
-  SiMongodb,
+  SiReact,  
   SiRadixui,
   SiLucide,  
   SiRedux,
@@ -50,7 +48,7 @@ export default function Projects() {
       type: "Accessibility App",
       icon: (
         <Image
-          src="/icons/silent-speech.png"
+          src="/icons/silent-speech-icon.png"
           alt="Silent Speech Icon"
           width={48}
           height={48}
@@ -77,7 +75,7 @@ export default function Projects() {
       type: "E-commerce Web Application",
       icon: (
         <Image
-          src="/icons/eccentrik.png"
+          src="/icons/eccentrik-icon.png"
           alt="Eccentrik Icon"
           width={48}
           height={48}
@@ -98,11 +96,11 @@ export default function Projects() {
       codeUrl: "#",
     },
     {
-      title: "AJK",
-      type: "Attendance System",
+      title: "Parhlai",
+      type: "EdTech Platform",
       icon: (
         <Image
-          src="/icons/user-clock.png"
+          src="/icons/parhlai-icon.png"
           alt="User Clock Icon"
           width={24}
           height={24}
@@ -111,7 +109,7 @@ export default function Projects() {
       iconContainerClass: "h-12",
       description:
         "An employee attendance system with a responsive frontend built using React and SCSS, featuring Redux for state management and React Router for navigation.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "/images/parhlai.png",
       technologies: [
         { name: "React", icon: <SiReact className="w-8 h-8" /> },        
         { name: "Redux", icon: <SiRedux className="w-8 h-8" /> },

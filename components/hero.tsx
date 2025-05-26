@@ -105,7 +105,6 @@ export default function Hero() {
   }, [])
 
   const scrollToNextSection = () => {
-    // Scroll to the next section - assuming there's a section with id="about" after the hero
     const nextSection = document.getElementById("about")
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" })
@@ -130,7 +129,7 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto">
-              A passionate developer crafting beautiful and functional web experiences
+              Innovative developer crafting seamless web, mobile, and cloud experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button
@@ -166,8 +165,7 @@ export default function Hero() {
           <ArrowDown size={24} />
         </button>
       </div>
-
-      {/* Background elements */}
+      
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full filter blur-3xl"></div>
