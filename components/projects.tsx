@@ -99,8 +99,8 @@ export default function Projects() {
       type: "EdTech Platform",
       icon: (
         <Image
-          src="/icons/parhlai-icon.png"
-          alt="User Clock Icon"
+          src="/icons/parhlai-icon.svg"
+          alt="Parhlai Icon"
           width={24}
           height={24}
         />
