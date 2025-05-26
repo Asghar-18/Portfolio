@@ -69,19 +69,19 @@ export default function Contact() {
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      value: "your.email@example.com",
-      link: "mailto:your.email@example.com",
+      value: "asgharali23890@gmail.com",
+      link: "mailto:asgharali23890@gmail.com",
     },
     {
       icon: <Phone className="h-5 w-5" />,
       title: "Phone",
-      value: "+1 (123) 456-7890",
-      link: "tel:+11234567890",
+      value: "+92 322 674-6989",
+      link: "tel:+923226746989",
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Islamabad, Pakistan",
       link: null,
     },
   ]

@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   SiJavascript,
-  SiReact,  
+  SiReact,
   SiRadixui,
-  SiLucide,  
+  SiLucide,
   SiRedux,
   SiNextdotjs,
   SiTailwindcss,
@@ -16,10 +16,9 @@ import {
   SiPython,
   SiKotlin,
   SiAndroidstudio,
-  SiTensorflow,  
+  SiTensorflow,
 } from "react-icons/si";
-import {
-} from "react-icons/fa";
+import {} from "react-icons/fa";
 
 export default function Projects() {
   useEffect(() => {
@@ -67,8 +66,8 @@ export default function Projects() {
           icon: <SiAndroidstudio className="w-8 h-8" />,
         },
       ],
-      liveUrl: "#",
-      codeUrl: "#",
+      liveUrl: "https://silentspeech.vercel.app/",
+      codeUrl: "https://github.com/Asghar-18/silent-speech",
     },
     {
       title: "Eccentrik",
@@ -90,10 +89,10 @@ export default function Projects() {
         { name: "TypeScript", icon: <SiTypescript className="w-8 h-8" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="w-8 h-8" /> },
         { name: "Radix UI", icon: <SiRadixui className="w-8 h-8" /> },
-        { name: "Lucide React", icon: <SiLucide className="w-8 h-8" /> },        
+        { name: "Lucide React", icon: <SiLucide className="w-8 h-8" /> },
       ],
-      liveUrl: "#",
-      codeUrl: "#",
+      liveUrl: "https://eccentrik-shop.vercel.app/",
+      codeUrl: "https://github.com/Asghar-18/Eccentrik",
     },
     {
       title: "Parhlai",
@@ -111,12 +110,12 @@ export default function Projects() {
         "An employee attendance system with a responsive frontend built using React and SCSS, featuring Redux for state management and React Router for navigation.",
       image: "/images/parhlai.png",
       technologies: [
-        { name: "React", icon: <SiReact className="w-8 h-8" /> },        
+        { name: "React", icon: <SiReact className="w-8 h-8" /> },
         { name: "Redux", icon: <SiRedux className="w-8 h-8" /> },
         { name: "JavaScript", icon: <SiJavascript className="w-8 h-8" /> },
         { name: "Express.js", icon: <SiExpress className="w-8 h-8" /> },
       ],
-      liveUrl: "#",
+      liveUrl: "https://parhlai.com/",
       codeUrl: "#",
     },
   ];
@@ -165,7 +164,11 @@ export default function Projects() {
               <div className="p-6 flex-1 flex flex-col bg-gray-900">
                 {/* Project Type and Title */}
                 <div className="flex items-center gap-3 mb-3">
-                  <div className={`w-12 rounded-lg ${project.iconContainerClass}`}>{project.icon}</div>
+                  <div
+                    className={`w-12 rounded-lg ${project.iconContainerClass}`}
+                  >
+                    {project.icon}
+                  </div>
                   <div>
                     <p className="text-gray-300 text-sm">{project.type}</p>
                     <h3 className="text-xl font-bold text-purple-400">
@@ -202,14 +205,16 @@ export default function Projects() {
                     >
                       Live Link
                     </a>
-                    <a
-                      href={project.codeUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-full transition-colors"
-                    >
-                      Code
-                    </a>
+                    {project.codeUrl !== "#" && (
+                      <a
+                        href={project.codeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-full transition-colors"
+                      >
+                        Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
